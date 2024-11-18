@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Dev with Flask</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <header>
+        <h1>Student Detailing Form</h1>
+    </header>
+    <main>
+    <form action="http://127.0.0.1:5000">
+    <input type="text" name="user" placeholder="Enter your first name">
+    <hr>
+    <input type="text" placeholder="Enter your last name">
+    <hr>
+    <input type="text" placeholder="Enter your college name">
+    <hr>
+    <input type="text" placeholder="Enter your college roll number">
+    <hr>
+    <p>Enter your birth of date:</p>
+    <input type="date"> 
+    <hr>
+    <input type="email" placeholder="Enter your email id.">
+    <hr>
+    <input type="tel" placeholder="Enter your phone number.">
+    <hr>
+    <p>Enter the number of social media accounts you have:</p><input type="number">
+    <hr>
+    <h3>Choose your Branch</h3>
+    <label id="CSAI">
+    <input type="radio" value="CSAI" name="Branch" id="1">CSAI
+    </label>
+    <br>
+    <label id="CSDS">
+    <input type="radio" value="CSDS" name="Branch" id="2'">CSDS
+    </label>
+    <br>
+    <label id="CSE">
+    <input type="radio" value="CSE" name="Branch">CSE
+    </label>
+    <br>
+    <label id="ITNS">
+    <input type="radio" value="ITNS" name="Branch">ITNS
+    </label>
+    <div id="CSAI"class="group1"></div>
+    <div id="CSDS" class="group1"></div>
+    <div id="CSE"class="group1"></div>
+    <div id="ITNS" class="group1"></div>
+    <h3>Choose your hobbies</h3>
+    <div>
+    <label id="11">
+    <input type="checkbox" value="dancing" name="hobbies" id="11">Dancing
+    </label>  
+    <label id="12">
+    <input type="checkbox" value="singing" name="hobbies" id="12">Singing
+    </label> 
+    <label id="13">
+    <input type="checkbox" value="acting" name="hobbies" id="13">Acting
+    </label> 
+    <label id="14">
+    <input type="checkbox" value="travelling" name="hobbies" id="14">Travelling
+    </label> 
+    <div id="11"class="group2"></div>
+    <div id="12" class="group2"></div>
+    <div id="13"class="group2"></div>
+    <div id="14" class="group2"></div>
+    <h3>Select your country</h3>
+    <select name="country" id="country">
+        <option>India</option>
+        <option>United Kingdom</option>
+        <option>France</option>
+        <option>United States of America</option>
+        <option>Any Other Country, so please type below</option>
+    </select>
+    <br>
+    <input type="text" placeholder="Any Other Country">
+    <br>
+    <br>
+    <textarea type="text" placeholder="Please give your feedback here"></textarea>
+    <br>
+    <input type="submit" value="SUBMIT"></a>
+    </form>
+    </main>
+    
+</body>
+</html>
