@@ -1,28 +1,26 @@
-from flask import Flask, redirect, url_for, request, render_template
-
-app = Flask(__name__)
-
-@app.route('/success/<name>')
-def success(name):
-    # Print for debugging
-    print(f"Redirecting to success with name: {name}")
-    return f"Welcome {name}"
-
-@app.route('/login', methods=['POST', 'GET'])
-def login():
-    if request.method == 'POST':
-        user = request.form.get('user')  # Get the 'user' value from the form data
-        if user:
-            # Print for debugging
-            print(f"Received user: {user}")
-            return redirect(url_for('success', name=user))
-        else:
-            print("No user name provided.")
-            return "Error: No user name provided."
-
-    # Render the login form for GET request
-    return render_template('app.html')
-
-if __name__ == '__main__':
+#Vamika Arya
+from flask import Flask, redirect, url_for, request
+import csv
+file=open("form.csv","w")
+app=Flask(__name__)
+#First Binding for greeting the user
+@app.route("/<user>")
+def greet(user):
+    return f'<html><body><h1><style="color:pink">Welcome {user}</h1></body></html>'
+#Second Binding for handling the requests
+@app.route('/store data',methods=["POST","GET"])
+def handling_data():
+    if request.method=="POST":
+        user_name=request.form["user"]
+        writer=csv.writer(file)
+        writer.writerows(user_name)
+        return redirect(url_for('greet',user=user_name))
+    else:
+        user=request.args.get["user"]
+        return redirect(url_for(greet,user=user))
+if (__name__=="__main__"):
     app.run(debug=True)
 
+
+        
+    
