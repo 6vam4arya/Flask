@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Data Store</title>
+</head>
+<body bgcolor="black">
+    <h1 style="color:cadetblue; text-align: center;"><u>Storing "Student Detailing Form Data" in Backend....</u></h1>
+    <table border='2'style="border:10px groove pink" align="center">
+        {% for k,v in dict.items() %}
+        <tr>
+            <th style="color:aliceblue">{{k}}</th>
+            <td style="color:aliceblue">{{v}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
